@@ -10,6 +10,7 @@ get '/another' do
   "this is another route"
 end
 get '/cat' do
-  erb(:index)
+  @name = ["Amigo", "Oscar", "Viking"].sample
+  erb :index
   
 end
