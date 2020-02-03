@@ -1,4 +1,5 @@
 require "sinatra"
+set :session_secret, 'super secret'
 get '/' do
   "Hello World of Barri, I am doing a website"
 end
@@ -9,7 +10,6 @@ get '/another' do
   "this is another route"
 end
 get '/cat' do
-"<div>
-<img src='http://bit.ly/1eze8aE'>
-</div>"
+  erb(:index)
+  
 end
